@@ -19,18 +19,19 @@ A conversational chatbot powered by Flask, MongoDB, and Docker. This project sup
 ```bash
 git clone https://github.com/your-username/chatbot.git
 cd chatbot
-
+```
+```bash
 pip install -r requirements.txt
 
 python app.py
-
+```
 ## Docker Deployment
 
 ### Build and Run
 1. Build the Docker containers:
    ```bash
    docker-compose up --build
-
+   ```
 
 Access the application at http://localhost:5000/chat-ui.
 
@@ -46,7 +47,7 @@ Document the available API endpoints.
 - `POST /chat`: Send a message and get a bot response.
 - `GET /history`: Retrieve chat history for a specific room.
 - `GET /analytics/frequent`: Retrieve the most frequently asked questions in a specific room.
-
+```
 
 ## Technologies Used
 - **Python** (Flask)
