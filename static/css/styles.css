@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    background-color: #f9e9ec; /* Pink */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 70%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    box-sizing: border-box;
+    max-width: 100%; /* Ensure the container can expand */
+
+}
+
+/* Header */
+/* Chat Header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d2f6f; /* Dark Blue */
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Dropdown Button */
+.dropdown-toggle {
+    background-color: #f39c12; /* Warm orange */
+    color: white;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-toggle:hover {
+    background-color: #e67e22; /* Darker orange */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #ffffff; /* White */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 8px;
+    padding: 10px 0; /* Spacing for items */
+    border: none;
+    min-width: 200px; /* Wider dropdown */
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    color: #1d2f6f; /* Dark Blue */
+    font-weight: 500;
+    padding: 10px 20px; /* Padding for better spacing */
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: #f39c12; /* Highlighted orange */
+    color: white;
+    border-radius: 6px; /* Rounded corners on hover */
+}
+
+/* Active Room Style */
+.dropdown-item.active {
+    background-color: #e67e22; /* Darker orange */
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+/* Chat Body */
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9e9ec; /* Pink */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chat Message Styles */
+.chat-message {
+    display: flex;
+    animation: fadeIn 0.5s
+    ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.chat-message.user {
+    justify-content: flex-end;
+}
+
+
+
+.chat-message.bot {
+    justify-content: flex-start;
+}
+
+.chat-bubble {
+    max-width: 60%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message.user .chat-bubble {
+    background-color: #8390fa; /* Light Blue */
+    color: white;
+}
+
+.chat-message.bot .chat-bubble {
+    background-color: #fac748; /* Yellow */
+    color: #1d2f6f; /* Dark Blue */
+}
+
+/* Chat Footer */
+.chat-footer {
+    display: flex;
+    align-items: center; /* Vertically align textarea and button */
+    gap: 10px; /* Add spacing between textarea and button */
+    padding: 15px;
+    background-color: #ffffff; /* White background */
+    border-top: 1px solid #fac748; /* Yellow border */
+}
+
+/* Ensure #chat-form is a flex container */
+#chat-form {
+    display: flex; /* Flexbox layout for alignment */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between textarea and button */
+    flex: 1; /* Allow the form to stretch within the footer */
+}
+
+/* Textarea for User Input */
+#chat-form .form-control {
+    flex-grow: 1; /* Make the textarea fill all available space */
+    min-width: 0; /* Prevent overflow */
+    height: 50px; /* Fixed height */
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #fac748; /* Yellow border */
+    padding: 12px 15px;
+    font-size: 14px;
+    resize: none; /* Disable resizing */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Send Button */
+#chat-form .btn {
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    height: 50px; /* Match the height of the textarea */
+    padding: 12px 20px; /* Adjust padding for proper size */
+    background-color: #1d2f6f; /* Dark Blue */
+    color: white; /* Button text color */
+    border-radius: 20px; /* Rounded corners */
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text wrapping inside the button */
+}
+
+
+.chat-footer .btn:hover {
+    background-color: #f88dad; /* Magenta on hover */
+}

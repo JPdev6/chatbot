@@ -1,0 +1,15 @@
+# Ignore environments
+venv/
+env/
+cleanenv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS files
+.DS_Store
+
+# Editor configs
+.vscode/
+.idea/
